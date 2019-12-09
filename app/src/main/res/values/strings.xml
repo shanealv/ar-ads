@@ -15,4 +15,6 @@
 -->
 <resources>
     <string name="app_name">AugmentedFaces Java</string>
+    <string name="header">Ad Header</string>
+    <string name="footer">Ad Footer</string>
 </resources>

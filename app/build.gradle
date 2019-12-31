@@ -42,7 +42,7 @@ android {
 dependencies {
 
     // Provides ArFragment, and other Sceneform UX resources:
-    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.13.0"
+    implementation "com.google.ar.sceneform.ux:sceneform-ux:1.14.0"
 
     // Use the Sceneform UX Package built from the source files included in the sceneformux folder.
     //api project(":sceneformux")
@@ -66,3 +66,9 @@ sceneform.asset('sampledata/models/bearface.fbx',
         'default',
         'sampledata/models/bearface.sfa',
         'src/main/res/raw/bearface')
+
+
+sceneform.asset('sampledata/models/bear_mask/bear_mask.fbx',
+        'default',
+        'sampledata/models/bear_mask/bear_mask.sfa',
+        'src/main/res/raw/bear_mask')

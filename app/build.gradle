@@ -56,18 +56,6 @@ dependencies {
 
 apply plugin: 'com.google.ar.sceneform.plugin'
 
-sceneform.asset('sampledata/models/fox_face.fbx',
-        'sampledata/models/fox_face_material.mat',
-        'sampledata/models/fox_face.sfa',
-        'src/main/res/raw/fox_face')
-
-
-sceneform.asset('sampledata/models/bearface.fbx',
-        'default',
-        'sampledata/models/bearface.sfa',
-        'src/main/res/raw/bearface')
-
-
 sceneform.asset('sampledata/models/bear_mask/bear_mask.fbx',
         'default',
         'sampledata/models/bear_mask/bear_mask.sfa',

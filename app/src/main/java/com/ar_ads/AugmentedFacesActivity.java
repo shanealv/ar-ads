@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.ar.sceneform.samples.augmentedfaces;
+package com.ar_ads;
 
 import android.app.Activity;
 import android.app.ActivityManager;
@@ -34,13 +34,10 @@ import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.rendering.Texture;
 import com.google.ar.sceneform.ux.AugmentedFaceNode;
 
-import java.io.File;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
-
-import com.google.ar.sceneform.samples.augmentedfaces.Telemetry;
 
 /**
  * This is an example activity that uses the Sceneform UX package to make common Augmented Faces

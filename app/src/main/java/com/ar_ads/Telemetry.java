@@ -1,4 +1,4 @@
-package com.google.ar.sceneform.samples.augmentedfaces;
+package com.ar_ads;
 
 import java.io.BufferedWriter;
 import java.io.FileWriter;

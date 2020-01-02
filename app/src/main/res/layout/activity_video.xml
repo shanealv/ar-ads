@@ -17,12 +17,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AugmentedFacesActivity">
+    tools:context=".VideoActivity">
 
 
     <fragment
-        android:id="@+id/face_fragment"
+        android:id="@+id/face_fragment_empty"
         android:name="com.ar_ads.FaceArFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <VideoView
+        android:id="@+id/video_fragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
@@ -40,6 +45,6 @@
         android:layout_gravity="end"
         android:adjustViewBounds="true"
         android:contentDescription="@string/footer"
-        android:src="@drawable/banner_footer_ar" />
+        android:src="@drawable/banner_footer_vid" />
 
 </FrameLayout>

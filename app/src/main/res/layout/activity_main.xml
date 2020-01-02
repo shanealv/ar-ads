@@ -38,7 +38,8 @@
             android:id="@+id/static_launch"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Launch" />
+            android:text="Launch"
+            android:onClick="handle_video_launch" />
 
         <Button
             android:id="@+id/static_stats"

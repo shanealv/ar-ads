@@ -1,10 +1,9 @@
-package com.google.ar.sceneform.samples.augmentedfaces;
+package com.ar_ads;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +18,11 @@ public class MainActivity extends AppCompatActivity {
      */
     public void handle_ar_launch(View view) {
         Intent intent = new Intent(this, AugmentedFacesActivity.class);
+        startActivity(intent);
+    }
+
+    public void handle_video_launch(View view) {
+        Intent intent = new Intent(this, VideoActivity.class);
         startActivity(intent);
     }
 

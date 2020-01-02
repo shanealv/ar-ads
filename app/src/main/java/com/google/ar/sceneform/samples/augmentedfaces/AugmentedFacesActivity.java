@@ -22,6 +22,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.Toast;
+
 import com.google.ar.core.ArCoreApk;
 import com.google.ar.core.AugmentedFace;
 import com.google.ar.core.TrackingState;
@@ -32,10 +33,14 @@ import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
 import com.google.ar.sceneform.rendering.Texture;
 import com.google.ar.sceneform.ux.AugmentedFaceNode;
+
+import java.io.File;
 import java.util.Collection;
 import java.util.HashMap;
 import java.util.Iterator;
 import java.util.Map;
+
+import com.google.ar.sceneform.samples.augmentedfaces.Telemetry;
 
 /**
  * This is an example activity that uses the Sceneform UX package to make common Augmented Faces
@@ -47,7 +52,7 @@ public class AugmentedFacesActivity extends AppCompatActivity {
   private static final double MIN_OPENGL_VERSION = 3.0;
 
   private FaceArFragment arFragment;
-
+  private Telemetry telemetry;
   private ModelRenderable faceRegionsRenderable;
   private Texture faceMeshTexture;
 
@@ -63,7 +68,7 @@ public class AugmentedFacesActivity extends AppCompatActivity {
     if (!checkIsSupportedDeviceOrFinish(this)) {
       return;
     }
-
+    telemetry = new Telemetry(getApplicationContext().getFilesDir().toString());
     setContentView(R.layout.activity_face_mesh);
     arFragment = (FaceArFragment) getSupportFragmentManager().findFragmentById(R.id.face_fragment);
 
@@ -119,7 +124,8 @@ public class AugmentedFacesActivity extends AppCompatActivity {
           while (iter.hasNext()) {
             Map.Entry<AugmentedFace, AugmentedFaceNode> entry = iter.next();
             AugmentedFace face = entry.getKey();
-            if (face.getTrackingState() == TrackingState.STOPPED) {
+            if (face.getTrackingState() == TrackingState.PAUSED) {
+              telemetry.logFaceTracking("ar");
               AugmentedFaceNode faceNode = entry.getValue();
               faceNode.setParent(null);
               iter.remove();

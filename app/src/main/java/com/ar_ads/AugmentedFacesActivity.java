@@ -31,7 +31,6 @@ import com.google.ar.sceneform.FrameTime;
 import com.google.ar.sceneform.Scene;
 import com.google.ar.sceneform.rendering.ModelRenderable;
 import com.google.ar.sceneform.rendering.Renderable;
-import com.google.ar.sceneform.rendering.Texture;
 import com.google.ar.sceneform.ux.AugmentedFaceNode;
 
 import java.util.Collection;
@@ -51,7 +50,6 @@ public class AugmentedFacesActivity extends AppCompatActivity {
     private FaceArFragment arFragment;
     private Telemetry telemetry;
     private ModelRenderable faceRegionsRenderable;
-    private Texture faceMeshTexture;
 
     private final HashMap<AugmentedFace, AugmentedFaceNode> faceNodeMap = new HashMap<>();
 
@@ -81,12 +79,6 @@ public class AugmentedFacesActivity extends AppCompatActivity {
                             modelRenderable.setShadowReceiver(false);
                         });
 
-        // Load the face mesh texture.
-        Texture.builder()
-                .setSource(this, R.drawable.bear_face_mesh_texture)
-                .build()
-                .thenAccept(texture -> faceMeshTexture = texture);
-
         ArSceneView sceneView = arFragment.getArSceneView();
 
         // This is important to make sure that the camera stream renders first so that
@@ -97,7 +89,7 @@ public class AugmentedFacesActivity extends AppCompatActivity {
 
         scene.addOnUpdateListener(
                 (FrameTime frameTime) -> {
-                    if (faceRegionsRenderable == null || faceMeshTexture == null) {
+                    if (faceRegionsRenderable == null) {
                         return;
                     }
 
@@ -110,7 +102,6 @@ public class AugmentedFacesActivity extends AppCompatActivity {
                             AugmentedFaceNode faceNode = new AugmentedFaceNode(face);
                             faceNode.setParent(scene);
                             faceNode.setFaceRegionsRenderable(faceRegionsRenderable);
-                            faceNode.setFaceMeshTexture(faceMeshTexture);
                             faceNodeMap.put(face, faceNode);
                         }
                     }

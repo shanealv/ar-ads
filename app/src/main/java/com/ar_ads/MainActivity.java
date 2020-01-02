@@ -21,4 +21,9 @@ public class MainActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
+    public void handle_video_launch(View view) {
+        Intent intent = new Intent(this, VideoActivity.class);
+        startActivity(intent);
+    }
+
 }

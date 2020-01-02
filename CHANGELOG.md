@@ -2,6 +2,22 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+## [2.0.0](https://github.com/shanealv/ar-ads/compare/v1.2.0...v2.0.0) (2020-01-02)
+
+
+### ⚠ BREAKING CHANGES
+
+* **app:** This is to finally move away from the default structure of the example application
+
+### Features
+
+* **app:** add video ad ([055a55b](https://github.com/shanealv/ar-ads/commit/055a55b550fd0eae80d5f7497c8f2c59170c91f5))
+* **telemetry:** add telemetry for face counts ([7eba696](https://github.com/shanealv/ar-ads/commit/7eba6964ff793d4d80a311d2ab3282f9d4b354b0))
+* **video:** rename telemetry tag ([7c7be2c](https://github.com/shanealv/ar-ads/commit/7c7be2c5f51a5f77a2003ee99df9a77b604a7839))
+
+
+* **app:** rename package to com.ar_ads ([1b0714b](https://github.com/shanealv/ar-ads/commit/1b0714bb7dccffccf978b96662ffda140253408e))
+
 ## [1.2.0](https://github.com/shanealv/ar-ads/compare/v1.1.1...v1.2.0) (2019-12-31)
 
 

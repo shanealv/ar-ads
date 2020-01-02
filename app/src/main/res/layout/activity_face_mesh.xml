@@ -22,7 +22,7 @@
 
     <fragment
         android:id="@+id/face_fragment"
-        android:name="com.google.ar.sceneform.samples.augmentedfaces.FaceArFragment"
+        android:name="com.ar_ads.FaceArFragment"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 

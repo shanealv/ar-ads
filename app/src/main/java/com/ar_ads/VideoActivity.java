@@ -76,7 +76,7 @@ public class VideoActivity extends AppCompatActivity {
                 Map.Entry<AugmentedFace, AugmentedFaceNode> entry = iter.next();
                 AugmentedFace face = entry.getKey();
                 if (face.getTrackingState() == TrackingState.PAUSED) {
-                    telemetry.logFaceTracking("video");
+                    telemetry.logFaceTracking("vid");
                     iter.remove();
                 }
             }
